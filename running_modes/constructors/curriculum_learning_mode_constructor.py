@@ -43,15 +43,6 @@ class CurriculumLearningModeConstructor:
         elif model_type.LINK_INVENT == configuration.model_type:
             set_default_device_cuda()
             config = AutomatedCurriculumLearningInputConfiguration.parse_obj(configuration.parameters)
-        elif model_type.PATFORMER == configuration.model_type:
-            config = AutomatedCurriculumLearningInputConfiguration.parse_obj(configuration.parameters)
-            _logger = AutoCLLogger(configuration)
-            prior_config = ModelConfiguration(configuration.model_type, model_regime.INFERENCE, config.prior)
-            agent_config = ModelConfiguration(configuration.model_type, model_regime.INFERENCE, config.agent)
-            _prior = GenerativeModel(prior_config)
-            _agent = GenerativeModel(agent_config)
-            runner = AutomatedCurriculumRunner(config, _logger, _prior, _agent)
-            return runner
         else:
             raise KeyError(f"Incorrect model type: `{configuration.model_type}` provided")
 

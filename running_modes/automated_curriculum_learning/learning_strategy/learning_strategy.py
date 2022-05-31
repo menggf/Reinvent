@@ -1,5 +1,5 @@
 from running_modes.automated_curriculum_learning.learning_strategy import DAPStrategy, MAULIStrategy, MASCOFStrategy, \
-    SDAPStrategy, DAPSingleQueryStrategy, DAPPatformerStrategy
+    SDAPStrategy, DAPSingleQueryStrategy
 from running_modes.automated_curriculum_learning.learning_strategy.base_learning_strategy import BaseLearningStrategy
 from running_modes.automated_curriculum_learning.learning_strategy.learning_strategy_configuration import \
     LearningStrategyConfiguration
@@ -21,5 +21,3 @@ class LearningStrategy:
             return MASCOFStrategy(critic_model, optimizer, configuration, logger)
         if learning_strategy_enum.SDAP == configuration.name:
             return SDAPStrategy(critic_model, optimizer, configuration, logger)
-        if learning_strategy_enum.DAP_PATFORMER == configuration.name:
-            return DAPPatformerStrategy(critic_model, optimizer, configuration, logger)

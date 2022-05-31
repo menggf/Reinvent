@@ -7,8 +7,6 @@ from running_modes.automated_curriculum_learning.curriculum_strategy.base_curric
 from running_modes.automated_curriculum_learning.curriculum_strategy.linkinvent_curriculum_strategy import \
     LinkInventCurriculumStrategy
 from running_modes.automated_curriculum_learning.curriculum_strategy.no_curriculum_strategy import NoCurriculumStrategy
-from running_modes.automated_curriculum_learning.curriculum_strategy.patformer_curriculum_strategy import \
-    PatformerCurriculumStrategy
 from running_modes.automated_curriculum_learning.curriculum_strategy.reinvent_curriculum_strategy import \
     ReinventCurriculumStrategy
 from running_modes.automated_curriculum_learning.inception.inception import Inception
@@ -36,10 +34,6 @@ class CurriculumStrategy:
         elif curriculum_strategy_enum.LINK_INVENT == configuration.name:
             cl_strategy = LinkInventCurriculumStrategy(prior=prior, agent=agent, configuration=configuration,
                                                        diversity_filter=diversity_filter, logger=logger, inception=inception)
-            return cl_strategy
-        elif curriculum_strategy_enum.PATFORMER == configuration.name:
-            cl_strategy = PatformerCurriculumStrategy(prior=prior, agent=agent, configuration=configuration,
-                                                      diversity_filter=diversity_filter, logger=logger, inception=inception)
             return cl_strategy
         elif curriculum_strategy_enum.NO_CURRICULUM == configuration.name:
             cl_strategy = NoCurriculumStrategy(prior=prior, agent=agent, configuration=configuration,

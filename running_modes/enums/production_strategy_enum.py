@@ -6,4 +6,3 @@ class ProductionStrategyEnum:
     STANDARD = "standard"
     SPECIFIC_COMPONENTS = "specific_components"
     LINK_INVENT = "link_invent"
-    PATFORMER = "patformer"

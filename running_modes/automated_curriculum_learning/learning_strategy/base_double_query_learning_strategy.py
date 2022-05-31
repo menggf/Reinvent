@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from reinvent_models.patformer.dto import BatchLikelihoodDTO
+from reinvent_models.link_invent.dto.batch_likelihood_dto import BatchLikelihoodDTO
 
 from running_modes.automated_curriculum_learning.dto import UpdatedLikelihoodsDTO
 from running_modes.automated_curriculum_learning.learning_strategy.base_learning_strategy import BaseLearningStrategy

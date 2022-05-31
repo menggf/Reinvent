@@ -19,8 +19,6 @@ class AutoCLLogger:
                 return LocalLogger(configuration, auto_cl_config)
             elif model_type.LINK_INVENT == configuration.model_type:
                 return LocalLogger(configuration, auto_cl_config)
-            elif model_type.PATFORMER == configuration.model_type:
-                return LocalLogger(configuration, auto_cl_config)
         else:
             raise NotImplementedError("Remote Auto CL logging is not implemented.")
 

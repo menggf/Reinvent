@@ -6,8 +6,6 @@ from running_modes.automated_curriculum_learning.inception.inception import Ince
 from running_modes.automated_curriculum_learning.logging.base_logger import BaseLogger
 from running_modes.automated_curriculum_learning.production_strategy.link_invent_production_strategy import \
     LinkInventProductionStrategy
-from running_modes.automated_curriculum_learning.production_strategy.patformer_production_strategy import \
-    PatformerProductionStrategy
 from running_modes.automated_curriculum_learning.production_strategy.base_production_strategy import \
     BaseProductionStrategy
 from running_modes.automated_curriculum_learning.production_strategy.reinvent_production_strategy import \
@@ -36,11 +34,6 @@ class ProductionStrategy:
                                                       inception=inception,
                                                       scoring_function=scoring_function_instance,
                                                       configuration=configuration, logger=logger)
-            return production
-        elif production_strategy_enum.PATFORMER == configuration.name:
-            production = PatformerProductionStrategy(prior=prior, diversity_filter=diversity_filter,
-                                                     inception=inception, scoring_function=scoring_function_instance,
-                                                     configuration=configuration, logger=logger)
             return production
         else:
             raise NotImplementedError(f"Unknown production strategy {configuration.name}")

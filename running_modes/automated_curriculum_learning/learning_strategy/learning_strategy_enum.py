@@ -8,4 +8,3 @@ class LearningStrategyEnum:
     MASCOF = "mascof"
     SDAP = "sdap"
     DAP_SINGLE_QUERY = "dap_single_query"
-    DAP_PATFORMER = "dap_patformer"

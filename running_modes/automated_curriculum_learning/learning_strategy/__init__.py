@@ -1,4 +1,3 @@
-from running_modes.automated_curriculum_learning.learning_strategy.dap_patformer_strategy import DAPPatformerStrategy
 from running_modes.automated_curriculum_learning.learning_strategy.dap_single_query_strategy import \
     DAPSingleQueryStrategy
 from running_modes.automated_curriculum_learning.learning_strategy.dap_strategy import DAPStrategy
